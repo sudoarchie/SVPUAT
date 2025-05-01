@@ -13,8 +13,7 @@ import { School } from 'lucide-react';
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Institute Repository", href: "http://172.105.56.86:4000/home" },
-  { name: "Onos", href: "https://www.onos.gov.in/ums/index" },
+
   {
     name: "Institute",
     items: [
@@ -23,6 +22,7 @@ const navigation = [
     ],
   },
   { name: "Resources", href: "#resources" },
+  { name: "Ebook", href: "/ebook" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];

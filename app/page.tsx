@@ -20,6 +20,7 @@ import { useState, useEffect } from "react";
 import img from "@/public/1.jpeg";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import heroBg from "@/public/image.jpg";
+import Link from "next/link";
 
 const stats = [
   { name: "Digital Resources", value: "100,000+", icon: Library },
@@ -85,6 +86,8 @@ const digitalResources = [
     description: " ICAR-Indian Agricultural Research Institute. Agricultural Research can shape the future of India.",
     url: "https://lib.icar.gov.in/",
   },
+  { name: "Institute Repository", description: "Institute Repository", url: "http://172.105.56.86:4000/home" },
+  { name: "Onos", description: "one nation one subscription", url: "https://www.onos.gov.in/ums/index" },
 ];
 
 const galleryImages = [
@@ -564,13 +567,15 @@ export default function Home() {
             More Resources
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
-            <Card>
-              <CardHeader>
-                <CardTitle>E-Books</CardTitle>
-              </CardHeader>
-              <CardContent>Access thousands of digital books</CardContent>
-            </Card>
+            <Link href={"/ebook"}>
+              <Card>
+                <CardHeader>
+                  <CardTitle>E-Books</CardTitle>
+                </CardHeader>
+                <CardContent>Access thousands of digital books</CardContent>
+              </Card>
 
+            </Link>
             <Card>
               <CardHeader>
                 <CardTitle>Online Journals</CardTitle>
